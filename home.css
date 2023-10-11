@@ -1,0 +1,101 @@
+@import "style.css";
+
+/* Hero Section */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
+    align-items: center;
+  }
+  
+  .hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .hero-name span {
+    color: var(--main-color) !important;
+    animation: leftSideAni 1s ease forwards;
+    animation-delay: 1s;
+  }
+  
+  .hero-right img {
+    width: 100%;
+    animation: imageAni 1s ease forwards;
+    animation-delay: 1.5s;
+    align-items: center;
+  }
+  
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-left p {
+      color: white;
+      animation: leftSideAni 1s ease forwards;
+  }
+
+   /* Footer Section */
+ 
+ .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+
+}
+.social a {
+  font-size: 27px;
+  margin: 0.5rem;
+  align-items: center;
+  animation: topSideAni 1s ease forwards;
+}
+.social a .bx {
+  padding: 5px;
+  color: #fff;
+  background: #161616;
+  border-radius: 50%;
+  align-items: center;
+}
+.social a .bx:hover {
+  background: var(--main-color);
+}
+.social p {
+  color: #d9d9d9;
+  text-align: center;
+  animation: leftSideAni 1s ease forwards;
+}
+
+  
+
+  @media screen and (max-width: 825px) {
+      /* Hero Section */
+      #hero {
+        grid-template-columns: 1fr;
+        height: fit-content;
+      }
+    
+      .hero-right {
+        order: -1;
+      }
+    
+      .hero-right img {
+        width: 70%;
+      }
+    
+      .hero-left {
+        text-align: center;
+        padding-bottom: 5rem;
+      }
+    
+      .hero-left .pre-title {
+        margin: 0 auto;
+      }
+    
+      .hero-name {
+        font-size: 2.3rem;
+        margin-bottom: 0.5rem;
+      }
+  }

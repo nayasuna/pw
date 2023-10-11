@@ -1,0 +1,46 @@
+@import "style.css";
+
+/* Skills */
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+  }
+  
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+  .skills-list li {
+    color: azure;
+  }
+  
+  .skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+    animation: leftSideAni 1s ease forwards;
+  }
+
+  .skills h1 {
+    color: #ffae00;
+    animation: topSideAni 1s ease forwards;
+  }
+  .skills-right p {
+    color: azure;
+    animation: topSideAni 1s ease forwards;
+
+  }
+
+#skills{
+  padding: 70px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+  

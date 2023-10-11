@@ -1,0 +1,37 @@
+@import "style.css";
+
+/* About Section */
+
+  .About-title {
+    text-align: center;
+    animation: topSideAni 1s ease forwards;
+
+  }
+  
+  .About {
+    padding: 4rem 4rem;
+    text-align: center;
+    border-radius: var(--itemBorderRadius);
+  }
+
+  .About h1 {
+    color: #ffae00;
+    animation: topSideAni 1s ease forwards;
+  }
+  
+  .About h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+    animation: topSideAni 1s ease forwards;
+    color: #ffae00;
+  }
+  
+  .About p {
+      animation: leftSideAni 1s ease forwards;
+      font-family: 'Outfit', sans-serif;
+      color: azure;
+      font-size: 1rem;
+}
+
+
