@@ -1,37 +1,80 @@
 @import "style.css";
 
 /* About Section */
-
-  .About-title {
+.About-title {
     text-align: center;
     animation: topSideAni 1s ease forwards;
+}
 
-  }
-  
-  .About {
-    padding: 4rem 4rem;
+.About {
+    padding: 2rem;
     text-align: center;
     border-radius: var(--itemBorderRadius);
-  }
+}
 
-  .About h1 {
+.About h1 {
     color: #ffae00;
     animation: topSideAni 1s ease forwards;
-  }
-  
-  .About h4 {
+}
+
+.About h4 {
     margin: 1.5rem 0;
     font-weight: 500;
     font-size: 1.05rem;
     animation: topSideAni 1s ease forwards;
     color: #ffae00;
-  }
-  
-  .About p {
-      animation: leftSideAni 1s ease forwards;
-      font-family: 'Outfit', sans-serif;
-      color: azure;
-      font-size: 1rem;
 }
 
+.About p {
+    animation: leftSideAni 1s ease forwards;
+    font-family: 'Outfit', sans-serif;
+    color: azure;
+    font-size: 1rem;
+    text-align: justify; /* Rata kiri dan kanan */
+}
+
+/* Education Section */
+.Education {
+  padding: 1rem;
+  margin: 20px 0;
+  border: 15px;
+  animation: topSideAni 1s ease forwards;
+}
+
+.Education h1 {
+  color: #ffae00;
+  text-align: center;
+  animation: topSideAni 1s ease forwards;
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 auto; /* Center the item */
+  max-width: 600px; /* Optional: limit the width */
+}
+
+.education-image {
+  margin-right: 10px;
+}
+
+.education-image img {
+  width: 100%;
+  max-width: 100px; /* Ukuran maksimum gambar */
+  border-radius: 8px;
+}
+
+.education-text {
+  flex: 1;
+  color: white;
+}
+
+.education-text p,
+.education-text h5 {
+  color: white;
+  margin: 0;
+}
 

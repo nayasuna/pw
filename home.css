@@ -52,6 +52,7 @@
   width: 100%; /* Full width */
   padding: 20px 0;
   gap: 10px; /* Space between buttons */
+  animation: leftSideAni 1s ease forwards;
 }
 
 .button-home a {
