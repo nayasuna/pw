@@ -5,53 +5,97 @@
     height: 720px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
     align-items: center;
-  }
-  
-  .hero-name {
+}
+
+.hero-name {
     font-size: 3rem;
     font-weight: 700;
     margin: 0.5rem 0 1rem;
-  }
-  
-  .hero-name span {
+}
+
+.hero-name span {
     color: var(--main-color) !important;
     animation: leftSideAni 1s ease forwards;
     animation-delay: 1s;
-  }
-  
-  .hero-right img {
-    width: 100%;
+}
+
+.hero-right img {
+    width: 300px;
+    height: 300px;
     animation: imageAni 1s ease forwards;
     animation-delay: 1.5s;
-    align-items: center;
-  }
-  
-  .hero-right {
-    display: flex;
-    justify-content: center;
-  }
-  .hero-left p {
-      color: white;
-      animation: leftSideAni 1s ease forwards;
-  }
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-   /* Footer Section */
- 
- .footer {
+.hero-right {
+    position: absolute;
+    top: 90px;
+    right: 255px;
+    margin: 20px;
+}
+
+.hero-left {
+    padding-top: 5rem;
+}
+
+.hero-left p {
+    color: white;
+    animation: leftSideAni 1s ease forwards;
+}
+
+.button-home {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  align-items: center; /* Vertically center the buttons */
+  width: 100%; /* Full width */
+  padding: 20px 0;
+  gap: 10px; /* Space between buttons */
+}
+
+.button-home a {
+  background-color: #f0f0f0; /* Contoh warna background */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center text */
+  font-weight: bold; /* Make text bold */
+
+}
+
+.button-home h4:hover {
+  background-color: #d9d9d9; /* Efek hover */
+}
+
+/* CSS untuk wave */
+section svg {
+  display: block;  /* Menjadikan SVG sebagai elemen blok */
+  position: relative;  /* Mengatur posisi relatif */
+  top: -400px;  /* Mengangkat wave ke atas */
+  width: 100%;  /* Memastikan wave menyesuaikan lebar layar */
+  height: auto;  /* Mempertahankan proporsi tinggi */
+}
+
+/* Footer Section */
+.footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2rem 0;
-
+  padding: 1rem 0; /* Mengurangi padding */
+  margin-top: 90px; /* Sesuaikan jika masih ada jarak berlebih */
+  height: auto; /* Agar menyesuaikan konten */
 }
+
 .social a {
   font-size: 27px;
   margin: 0.5rem;
   align-items: center;
   animation: topSideAni 1s ease forwards;
 }
+
 .social a .bx {
   padding: 5px;
   color: #fff;
@@ -59,43 +103,111 @@
   border-radius: 50%;
   align-items: center;
 }
+
 .social a .bx:hover {
   background: var(--main-color);
 }
+
 .social p {
   color: #d9d9d9;
   text-align: center;
   animation: leftSideAni 1s ease forwards;
+  gap: 10px;
+  padding: 10px 0; /* Mengurangi padding teks */
 }
 
-  
 
-  @media screen and (max-width: 825px) {
-      /* Hero Section */
-      #hero {
-        grid-template-columns: 1fr;
-        height: fit-content;
-      }
-    
-      .hero-right {
-        order: -1;
-      }
-    
-      .hero-right img {
-        width: 70%;
-      }
-    
-      .hero-left {
-        text-align: center;
-        padding-bottom: 5rem;
-      }
-    
-      .hero-left .pre-title {
+
+/* Media Queries for Tablet */
+@media screen and (max-width: 1024px) {
+    #hero {
+        grid-template-columns: 1fr; /* Make columns stack on top of each other */
+        height: auto;
+    }
+
+    .hero-right {
+        position: relative;
+        top: auto;
+        right: auto;
         margin: 0 auto;
-      }
+        text-align: center;
+    }
+
+    .hero-right img {
+        width: 60%; /* Reduce image size for tablets */
+        height: auto;
+    }
+
+    .hero-left {
+        padding-top: 3rem;
+        text-align: center;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    #hero {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .hero-right {
+        order: -1;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 1rem;
+    }
+
+    .hero-right img {
+        width: 70%;
+    }
+
+    .hero-left {
+        padding: 1rem;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
     
-      .hero-name {
-        font-size: 2.3rem;
-        margin-bottom: 0.5rem;
-      }
-  }
+    /* Adjust footer for mobile */
+    .footer {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .social a {
+        font-size: 22px;
+    }
+}
+
+/* Media Queries for Small Mobile */
+@media screen and (max-width: 425px) {
+    .hero-right img {
+        width: 80%;
+        height: auto;
+    }
+
+    .hero-name {
+        font-size: 1.8rem;
+    }
+
+    .hero-left {
+        padding: 1rem;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        text-align: center;
+    }
+
+    .social a {
+        font-size: 20px;
+    }
+}

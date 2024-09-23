@@ -1,78 +1,86 @@
 @import "style.css";
 
 /* Portfolios */
-#portofolio {
-    align-items: center;
+/* Portfolios Section */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+ color : #ffae00;
 }
-  .portfolio {
-    border-radius: var(--itemBorderRadius);
-    overflow: hidden; /* supaya gambar yang diatas itu dia ngikut border radiusnya, karena yang dikasih border radius disini adalah div portfolio ini */
-    border: 1px solid var(--borderColor);
-    animation: topSideAni 1s ease forwards;
-  }
-  
-  .portfolio-cover {
-    height: 250px;
-  }
-  .portfolios h1 {
-    color: #ffae00;
-    animation: topSideAni 1s ease forwards;
-    height: auto;
 
-  }
-  .portfolio img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: leftSideAni 1s ease forwards;
-  
-  }
-  
-  .portfolio-info {
-    padding: 2rem 1.5rem;
-    animation: topSideAni 1s ease forwards;
-  }
-  
-  .portfolio-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .portfolio h4 {
-    color: azure;
-    font-size: 1.05rem;
-  }
-  
-  .portfolio-title a svg:hover {
-    fill: #ffae00;;
-  }
-  
-  .portfolio-title a svg {
-    transition: 0.2s ease-in-out;
-  }
-  
-  .portfolio-tags {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-    
-  }
-  
-  .portfolio-tags div {
-    font-size: 0.9rem;
-    border: 1px solid var(--borderColor);
-    padding: 0.4rem 1rem;
-    color: azure;
-  }
+.portfolios {
+  padding: 20px 0;
+}
 
-  .portfolio-tags div:hover {
-    color: var(--main-color);
-  }
-  .portfolio p {
-    color: azure;
-  }
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.portfolio {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.portfolio:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.portfolio-title h4 {
+  font-size: 24px;
+  color: #333;
+}
+
+
+
+.portfolio-link svg {
+  fill: #333;
+  transition: fill 0.3s;
+}
+
+.portfolio-link svg:hover {
+  fill: #ff6347;
+}
+
+.portfolio-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio-tags div {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.portfolio-info p {
+  font-size: 16px;
+  color: #666;
+}
 
   /* Layouts */
  .grid-3 {
@@ -80,6 +88,6 @@
   /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 

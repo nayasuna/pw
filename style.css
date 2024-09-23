@@ -26,6 +26,7 @@
 
 body {
   font-family: "Outfit", sans-serif;
+  background-color: #1f1f21;
 }
 
 h1,
@@ -57,11 +58,15 @@ a {
 }
 
 header {
-  background-color: var(--bg-color);
+  background-color: #1f1f21;
  }
  .main-container {
-   width: 1200px;
+  //min-height: 100vh; /* Full height of the viewport */
+   width: 1000px;
    margin: 0 auto;
+   background-color: #1f1f21;
+
+
  }
  
  @media screen and (max-width: 1200px) {
@@ -79,7 +84,7 @@ header {
  .pre-title {
    text-transform: uppercase;
    letter-spacing: 0.5rem;
-   color: var(--secondaryTextColor);
+   color: white;
    position: relative;
    padding-left: 40px;
    width: fit-content;
@@ -168,14 +173,14 @@ header {
      display: flex;
      justify-content: space-around;
      align-items: center;
-     padding: 2rem 0;
-  
  }
  .social a {
      font-size: 27px;
      margin: 0.5rem;
      align-items: center;
      animation: topSideAni 1s ease forwards;
+     align-items: flex-end;
+  
  }
  .social a .bx {
      padding: 5px;
@@ -184,12 +189,13 @@ header {
      border-radius: 50%;
      align-items: center;
      animation: topSideAni 1s ease forwards;
+     align-items: flex-end;
  }
  .social a .bx:hover {
      background: var(--main-color);
  }
  .social p {
-     color: #d9d9d9;
+    color: #d9d9d9;
      text-align: center;
      animation: leftSideAni 1s ease forwards;
  }
