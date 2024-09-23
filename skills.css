@@ -26,6 +26,7 @@
   .skills h1 {
     color: #ffae00;
     animation: topSideAni 1s ease forwards;
+    text-align: center;
   }
   .skills-right p {
     color: azure;
@@ -42,5 +43,58 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
 }
+
+/* Education Section */
+.Education {
+  padding: 1rem;
+  margin: 20px 0;
+  border-radius: 20px;
+  background-color: #282828;
+  animation: leftSideAni 1s ease forwards;
+}
+
+.Education h1 {
+  color: #ffae00;
+  text-align: center;
+}
+
+.education-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.education-item {
+  flex: 1 1 calc(50% - 15px);
+  display: flex;
+  align-items: center;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  padding: 1rem;
+  animation: topSideAni 1s ease forwards;
+}
+
+.education-image {
+  margin-right: 10px;
+}
+
+.education-image img {
+  width: 100%;
+  max-width: 100px; /* Ukuran maksimum gambar */
+  border-radius: 8px;
+}
+
+.education-text {
+  flex: 1;
+  color: white;
+}
+
+.education-text p,
+.education-text h5 {
+  color: white;
+  margin: 0;
+}
+
 
   
